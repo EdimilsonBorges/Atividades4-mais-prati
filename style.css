@@ -1,1 +1,237 @@
- /* CSS Portifólio */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --main-color: rgb(46, 213, 115);
+    --main-bg-color: rgba(46, 213, 116, 0.36);
+    --pattern-color: rgba(255, 255, 255, 0.01);
+}
+
+body {
+    background: #0D1117;
+    overflow-x: hidden;
+    font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.principal {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    gap: 35px;
+    overflow: hidden;
+}
+
+.principal::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgb(0, 0, 0, 0) 0%), linear-gradient(var(--pattern-color) 2px, transparent 1px), linear-gradient(to right, var(--pattern-color) 2px, transparent 1px);
+    background-size: cover, 10px 70px, 50px 10px;
+    transform: perspective(1000px) rotateX(60deg);
+    transform-origin: center top;
+    z-index: -1;
+}
+
+
+h1 {
+    font-size: 7em;
+}
+
+.gradient-shadow {
+    position: relative;
+    color: rgba(255, 255, 255, 0.85);
+    font-weight: bold;
+}
+
+.gradient-shadow::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 10px;
+    left: -30px;
+    width: 110%;
+    color: transparent;
+    background: radial-gradient(circle at right, rgb(247, 60, 60), rgb(123, 47, 123), rgb(78, 78, 249));
+    filter: blur(20px);
+    -webkit-filter: blur(20px);
+    -moz-filter: blur(20px);
+    z-index: -1;
+}
+
+h2 {
+    color: #619AEE;
+    font-size: 30px;
+    font-weight: 100;
+}
+
+h2::after {
+    content: "____";
+    position: relative;
+    bottom: 15px;
+    left: 10px;
+}
+
+h2::before {
+    content: "____";
+    position: relative;
+    bottom: 15px;
+    right: 10px;
+}
+
+.principal>p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 23px;
+}
+
+.tecnologias-principais {
+    display: flex;
+    gap: 20px;
+}
+
+.tecnologias-principais>span {
+    background-color: #1A1F2B;
+    font-weight: 600;
+    color: #CCD0D6;
+    border-radius: 20px;
+    padding: 10px 20px;
+    box-shadow: 0 0 0 0.3px #CCD0D6;
+    cursor: text;
+    transition: all 0.3s;
+}
+
+.tecnologias-principais>span:hover {
+    box-shadow: 0 0 0 0.9px #619AEE;
+}
+
+.btns-works {
+    display: flex;
+    gap: 30px;
+}
+
+.btns-works>a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    background-color: #1A1F2B;
+    font-weight: 400;
+    color: white;
+    border-radius: 25px;
+    padding: 15px 35px;
+    box-shadow: 0 0 0 0.5px #CCD0D6;
+    transition: all 0.3s;
+    font-size: 20px;
+}
+
+.btns-works>a>svg {
+    transition: all 0.3s;
+}
+
+.btns-works>a:hover svg {
+    transform: translateX(15px);
+}
+
+.btns-works>a:hover:not(.btn-destaque) {
+    background-color: #32343b !important;
+}
+
+.btn-destaque {
+    box-shadow:
+        0 0 20px 1px rgba(78, 78, 249, 0.5),
+        0 0 7px 0 rgba(123, 47, 123, 0.5),
+        0 0 10px 0 rgba(247, 60, 60, 0.5) !important;
+}
+
+.btn-destaque:hover {
+    box-shadow:
+        0 0 30px 1px rgba(78, 78, 249, 1),
+        0 0 7px 0 rgba(123, 47, 123, 1),
+        0 0 10px 0 rgba(247, 60, 60, 1) !important;
+}
+
+.emogis {
+    display: flex;
+    gap: 60px;
+}
+
+.emogis>span {
+    font-size: 30px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.emogis>span:hover {
+    transform: scale(1.2);
+}
+
+.floats {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    font-size: 45px;
+    color: rgba(255, 255, 255, 0.5);
+    z-index: -1;
+}
+
+.animate-float {
+    animation: float 6s ease-out infinite;
+}
+
+.animate-float2 {
+    animation: float 5s ease-in infinite;
+}
+
+.float1 {
+    position: absolute;
+    top: 13vh;
+    left: 25vw;
+}
+
+.float2 {
+    position: absolute;
+    top: 18vh;
+    right: 30vw;
+}
+
+.float3 {
+    position: absolute;
+    bottom: 13vh;
+    left: 30vw;
+}
+
+.float4 {
+    position: absolute;
+    bottom: 15vh;
+    right: 25vw;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-20px) rotate(10deg);
+    }
+
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+}
+
+
+.skills {
+    height: 100vh;
+    width: 100%;
+    background-color: #161B22;
+}
