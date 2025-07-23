@@ -67,20 +67,20 @@ h1 {
     z-index: -1;
 }
 
-h2 {
+#profession {
     color: #619AEE;
     font-size: 30px;
     font-weight: 100;
 }
 
-h2::after {
+#profession::after {
     content: "____";
     position: relative;
     bottom: 15px;
     left: 10px;
 }
 
-h2::before {
+#profession::before {
     content: "____";
     position: relative;
     bottom: 15px;
@@ -128,7 +128,6 @@ h2::before {
     color: white;
     border-radius: 25px;
     padding: 15px 35px;
-    box-shadow: 0 0 0 0.5px #CCD0D6;
     transition: all 0.3s;
     font-size: 20px;
 }
@@ -141,22 +140,26 @@ h2::before {
     transform: translateX(15px);
 }
 
+.btns-works>a:not(.btn-destaque) {
+    box-shadow: 0 0 0 0.5px #CCD0D6;
+}
+
 .btns-works>a:hover:not(.btn-destaque) {
-    background-color: #32343b !important;
+    background-color: #32343b;
 }
 
 .btn-destaque {
     box-shadow:
         0 0 20px 1px rgba(78, 78, 249, 0.5),
         0 0 7px 0 rgba(123, 47, 123, 0.5),
-        0 0 10px 0 rgba(247, 60, 60, 0.5) !important;
+        0 0 10px 0 rgba(247, 60, 60, 0.5);
 }
 
 .btn-destaque:hover {
     box-shadow:
         0 0 30px 1px rgba(78, 78, 249, 1),
         0 0 7px 0 rgba(123, 47, 123, 1),
-        0 0 10px 0 rgba(247, 60, 60, 1) !important;
+        0 0 10px 0 rgba(247, 60, 60, 1);
 }
 
 .emogis {
@@ -184,11 +187,11 @@ h2::before {
 }
 
 .animate-float {
-    animation: float 6s ease-out infinite;
+    animation: float 6s ease-in-out infinite;
 }
 
 .animate-float2 {
-    animation: float 5s ease-in infinite;
+    animation: float 5s ease-in-out infinite;
 }
 
 .float1 {
@@ -229,9 +232,107 @@ h2::before {
     }
 }
 
+.animate-bounce {
+    animation: bounce 1s infinite;
+}
+
+.seta-explorer {
+    position: absolute;
+    bottom: 4vh;
+    display: flex;
+    font-size: 18px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    color: #9CA3AF;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(-25%);
+        animation-timing-function: cubic-bezier(.8, 0, 1, 1);
+    }
+
+    50% {
+        transform: none;
+        animation-timing-function: cubic-bezier(0, 0, .2, 1);
+    }
+}
+
 
 .skills {
-    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: max-content;
+    padding: 95px;
     width: 100%;
     background-color: #161B22;
+    color: #fff;
+}
+
+.skills h2 {
+    margin-bottom: 80px;
+    font-size: 38px;
+}
+
+.skills h3 {
+    font-size: 35px;
+    text-align: center;
+}
+
+.campos-skills {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 45px;
+    width: 70%;
+}
+
+.cabecalho-skill {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.cabecalho-skill h4 {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.cabecalho-skill span {
+    color: #9CA3AF;
+}
+
+.campos-skills>section {
+    background-color: #21262D;
+    padding: 30px;
+    border-radius: 20px;
+    width: 100%;
+    transition: all 0.2s;
+
+}
+
+.campos-skills>section:hover {
+    transform: scale(1.02);
+}
+
+.progress {
+    background-color: #30363D;
+    border-radius: 30px;
+    height: 10px;
+}
+
+.progress-bar-front {
+    background: linear-gradient(90deg, rgba(59, 129, 246, 1) 0%, rgba(24, 76, 218, 1) 100%);
+    border-radius: 20px 0px 0px 20px;
+    height: 10px;
+}
+
+.progress-bar-back {
+    background: linear-gradient(90deg, rgba(33, 195, 93, 1) 0%, rgba(21, 124, 58, 1) 100%);
+    border-radius: 20px 0px 0px 20px;
+    height: 10px;
 }
