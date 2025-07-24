@@ -114,13 +114,13 @@ h1 {
     color: #CCD0D6;
     border-radius: 20px;
     padding: 7px 15px;
-    box-shadow: 0 0 0 0.3px #CCD0D6;
+    box-shadow: 0 0 0 0.3px rgba(204, 208, 214, 0.4) inset;
     cursor: text;
     transition: all 0.3s;
 }
 
 .tecnologias-principais>span:hover {
-    box-shadow: 0 0 0 0.5px #619AEE;
+    box-shadow: 0 0 0 0.5px rgb(92, 124, 230) inset;
 }
 
 .btns-works {
@@ -152,11 +152,11 @@ h1 {
 }
 
 .btns-works>a:not(.btn-destaque) {
-    box-shadow: 0 0 0 0.5px #CCD0D6;
+    box-shadow: 0 0 0 0.3px rgba(204, 208, 214, 0.4) inset;
 }
 
 .btns-works>a:hover:not(.btn-destaque) {
-    background-color: #32343b;
+    background-color: #2D333B;
 }
 
 .btn-destaque {
@@ -286,14 +286,21 @@ h1 {
     color: #fff;
 }
 
-.skills h2 {
+.skills h2{
     margin-bottom: 45px;
     font-size: 30px;
+    color: #fff;
+}
+
+.contact h2 {
+    font-size: 30px;
+    color: #fff;
 }
 
 #work h2 {
     margin-bottom: calc(45px + 75px);
     font-size: 30px;
+    color: #fff;
 }
 
 .skills h3 {
@@ -423,4 +430,81 @@ h1 {
 .cards-portifolio span {
     font-size: 13px;
     width: 290px;
+}
+
+.contact {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 45px;
+    gap: 25px;
+    background-color: #161B22;
+    width: 100%;
+    color: #fff;
+}
+
+.contact h3,
+.location {
+    color: #9CA3AF;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.location {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.btn-contacts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.btn-contacts a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    color: #fff;
+    background-color: #21262D;
+    text-decoration: none;
+    padding: 13px 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 0 0.2px rgba(97, 154, 238, 0.4) inset;
+
+}
+
+.btn-contacts a:hover {
+    background-color: #111827;
+}
+
+.btn-contacts a:not(.curriculo) {
+    background: radial-gradient(circle at right, #A655F7, #3D81F6);
+}
+
+.btn-contacts a:hover:not(.curriculo) {
+    background: radial-gradient(circle at right, #914ad7, #336bcc);
+}
+
+.btn-social-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.btn-social-media a {
+    color: #9CA3AF;
+    padding: 10px 10px 5px 10px;
+}
+
+.btn-social-media a:hover {
+    color: #ffffff;
+    background-color:#1F2937;
+    border-radius: 10px;
 }
