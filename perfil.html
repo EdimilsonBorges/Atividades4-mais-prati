@@ -12,11 +12,17 @@
 <body>
     <header>
         <nav>
-
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#skills">Habilidades</a></li>
+                <li><a href="#projects">Projetos</a></li>
+                <li><a href="#contact">Contato</a></li>
+            </ul>
         </nav>
     </header>
     <main>
-        <section class="principal">
+        <section id="home" class="principal">
             <div class="floats">
                 <span class="animate-float float1">⚛️</span>
                 <span class="animate-float2 float2">🚀</span>
@@ -35,7 +41,7 @@
                 <span>SQL</span>
             </div>
             <div class="btns-works">
-                <a class="btn-destaque" data-text="Veja meu trabalho" href="#work">Veja meu trabalho<svg width="20px"
+                <a class="btn-destaque" data-text="Veja meu trabalho" href="#projects">Veja meu trabalho<svg width="20px"
                         height="20px" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M13 7l5 5m0 0l-5 5m5-5H6">
@@ -57,8 +63,17 @@
                 </svg>
             </div>
         </section>
-        <section class="skills">
-            <h2>Conhecimento Técnico</h2>
+        <section class="about" id="about">
+            <div class="perfil">
+                <img src="./assets/img/perfil.jpg" alt="">
+                <h2>Edimilson Borges</h2>
+                <h3>Desenvolvedor Full Stack</h3>
+                <p>Sou um desenvolvedor Full Stack apaixonado por criar soluções web. Minhas habilidades incluem a criação de interfaces de usuário responsivas, APIs Rest entre outro. Estou constantemente atualizando minhas habilidades para me manter atualizado com as tendências tecnológicas, estou ansioso para enfrentar desafios e colaborar em projetos. Minha paixão pelo desenvolvimento web e mobile me impulsiona a buscar soluções criativas e a entregar produtos de alta qualidade que atendam às necessidades dos clientes e dos usuários finais.</p>
+
+            </div>
+        </section>
+        <section class="skills" id="skills">
+            <h2>Conhecimento técnico</h2>
             <div class="cards-skills">
                 <section>
                     <h3>🎨 Front-end</h3>
@@ -168,7 +183,7 @@
             </div>
         </section>
 
-        <section id="work">
+        <section id="projects">
             <h2>Projetos em destaque</h2>
             <div class="cards-portifolio">
                 <section>
@@ -286,7 +301,7 @@
                         </path>
                     </svg>Ver Currículo</a>
             </div>
-            <div class="btn-social-media">
+            <div id="contact" class="btn-social-media">
                 <a href="https://github.com/EdimilsonBorges" target="_blank"><svg width="25px" height="25px"
                         fill="currentColor" viewBox="0 0 24 24">
                         <path
@@ -316,7 +331,8 @@
         </section>
     </main>
     <footer>
-        <p>Copyright © 2025. Todos os direitos reservados | Desenvolvido por <a href="https://www.linkedin.com/in/edimilson-borges/">Edimilson Borges</a></p>
+        <p>Copyright © 2025. Todos os direitos reservados | Desenvolvido por <a
+                href="https://www.linkedin.com/in/edimilson-borges/">Edimilson Borges</a></p>
     </footer>
 </body>
 
