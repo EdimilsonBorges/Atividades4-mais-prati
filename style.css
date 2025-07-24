@@ -10,10 +10,19 @@
     --pattern-color: rgba(255, 255, 255, 0.01);
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background: #0D1117;
     overflow-x: hidden;
     font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    /* Melhora a nitidez da fonte */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+
 }
 
 .principal {
@@ -24,7 +33,8 @@ body {
     align-items: center;
     width: 100%;
     height: 100vh;
-    gap: 35px;
+    min-height: 460px;
+    gap: 25px;
     overflow: hidden;
 }
 
@@ -44,7 +54,7 @@ body {
 
 
 h1 {
-    font-size: 7em;
+    font-size: 75px;
 }
 
 .gradient-shadow {
@@ -69,52 +79,53 @@ h1 {
 
 #profession {
     color: #619AEE;
-    font-size: 30px;
+    font-size: 25px;
     font-weight: 100;
 }
 
 #profession::after {
     content: "____";
     position: relative;
-    bottom: 15px;
+    bottom: 10px;
     left: 10px;
 }
 
 #profession::before {
     content: "____";
     position: relative;
-    bottom: 15px;
+    bottom: 10px;
     right: 10px;
 }
 
 .principal>p {
     color: rgba(255, 255, 255, 0.7);
-    font-size: 23px;
+    font-size: 18px;
 }
 
 .tecnologias-principais {
     display: flex;
-    gap: 20px;
+    gap: 15px;
 }
 
 .tecnologias-principais>span {
     background-color: #1A1F2B;
     font-weight: 600;
+    font-size: 15px;
     color: #CCD0D6;
     border-radius: 20px;
-    padding: 10px 20px;
+    padding: 7px 15px;
     box-shadow: 0 0 0 0.3px #CCD0D6;
     cursor: text;
     transition: all 0.3s;
 }
 
 .tecnologias-principais>span:hover {
-    box-shadow: 0 0 0 0.9px #619AEE;
+    box-shadow: 0 0 0 0.5px #619AEE;
 }
 
 .btns-works {
     display: flex;
-    gap: 30px;
+    gap: 20px;
 }
 
 .btns-works>a {
@@ -127,9 +138,9 @@ h1 {
     font-weight: 400;
     color: white;
     border-radius: 25px;
-    padding: 15px 35px;
+    padding: 13px 30px;
     transition: all 0.3s;
-    font-size: 20px;
+    font-size: 17px;
 }
 
 .btns-works>a>svg {
@@ -164,11 +175,12 @@ h1 {
 
 .emogis {
     display: flex;
-    gap: 60px;
+    gap: 45px;
+    margin-top: 10px;
 }
 
 .emogis>span {
-    font-size: 30px;
+    font-size: 25px;
     cursor: pointer;
     transition: all 0.2s;
 }
@@ -181,7 +193,7 @@ h1 {
     position: absolute;
     width: 100vw;
     height: 100vh;
-    font-size: 45px;
+    font-size: 35px;
     color: rgba(255, 255, 255, 0.5);
     z-index: -1;
 }
@@ -240,11 +252,11 @@ h1 {
     position: absolute;
     bottom: 4vh;
     display: flex;
-    font-size: 18px;
+    font-size: 14px;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 14px;
+    gap: 12px;
     color: #9CA3AF;
 }
 
@@ -268,71 +280,147 @@ h1 {
     align-items: center;
     flex-direction: column;
     height: max-content;
-    padding: 95px;
-    width: 100%;
+    padding: 45px 0px 100px 0px;
+    width: auto;
     background-color: #161B22;
     color: #fff;
 }
 
 .skills h2 {
-    margin-bottom: 80px;
-    font-size: 38px;
+    margin-bottom: 45px;
+    font-size: 30px;
+}
+
+#work h2 {
+    margin-bottom: calc(45px + 75px);
+    font-size: 30px;
 }
 
 .skills h3 {
-    font-size: 35px;
+    font-size: 25px;
     text-align: center;
 }
 
-.campos-skills {
+.cards-skills {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 45px;
-    width: 70%;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    width: 900px;
 }
 
 .cabecalho-skill {
     display: flex;
     justify-content: space-between;
-    margin: 10px 0;
+    margin: 7px 0;
 }
 
 .cabecalho-skill h4 {
-    font-size: 18px;
+    font-size: 0.875rem;
     font-weight: 400;
 }
 
 .cabecalho-skill span {
     color: #9CA3AF;
+    font-size: 0.875rem;
 }
 
-.campos-skills>section {
+.cards-skills>section {
     background-color: #21262D;
-    padding: 30px;
+    padding: 25px;
     border-radius: 20px;
     width: 100%;
     transition: all 0.2s;
 
 }
 
-.campos-skills>section:hover {
+.cards-skills>section:hover {
     transform: scale(1.02);
 }
 
 .progress {
     background-color: #30363D;
     border-radius: 30px;
-    height: 10px;
+    height: 7px;
 }
 
 .progress-bar-front {
     background: linear-gradient(90deg, rgba(59, 129, 246, 1) 0%, rgba(24, 76, 218, 1) 100%);
     border-radius: 20px 0px 0px 20px;
-    height: 10px;
+    height: 7px;
 }
 
 .progress-bar-back {
     background: linear-gradient(90deg, rgba(33, 195, 93, 1) 0%, rgba(21, 124, 58, 1) 100%);
     border-radius: 20px 0px 0px 20px;
-    height: 10px;
+    height: 7px;
+}
+
+#work {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 45px;
+    color: #fff;
+}
+
+.cards-portifolio {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    width: auto;
+}
+
+.cards-portifolio section {
+    border-radius: 10px;
+    height: 100%;
+    margin-top: -75px;
+}
+
+
+.cards-portifolio img {
+    border-radius: 10px 10px 0 0;
+    width: 330px;
+    height: 330px;
+    filter: brightness(75%);
+    -webkit-filter: brightness(75%);
+    -moz-filter: brightness(75%)
+}
+
+.cards-portifolio img:hover {
+    filter: brightness(100%);
+    -webkit-filter: brightness(100%);
+    -moz-filter: brightness(100%);
+}
+
+.cards-portifolio>section>div {
+    bottom: 75px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+    background-color: rgba(31, 41, 55, 1);
+    padding: 20px;
+    border-radius: 0 0 10px 10px;
+    height: 260px;
+}
+
+.cards-portifolio>section>div>div {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.cards-portifolio a {
+    color: #619AEE;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.cards-portifolio a:hover {
+    color: #a9bedd;
+}
+
+.cards-portifolio span {
+    font-size: 13px;
+    width: 290px;
 }
