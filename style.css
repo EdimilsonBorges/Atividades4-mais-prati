@@ -5,7 +5,6 @@
 }
 
 :root {
-    --main-color: rgb(46, 213, 115);
     --main-bg-color1: #0D1117;
     --main-bg-color2: #161B22;
     --pattern-color: rgba(255, 255, 255, 0.01);
@@ -30,23 +29,23 @@ header {
     align-items: center;
     justify-content: center;
     background-color: rgba(18, 18, 18, 0.4);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(0.625rem);
     padding: 1rem 0;
     position: fixed;
     width: 100%;
     z-index: 1000;
     top: 0;
-    border-bottom: 1px solid #1F2937;
+    border-bottom: 0.0625rem solid #1F2937;
 }
 
 header nav ul {
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 1.875rem;
     height: 100%;
     list-style: none;
     padding-left: 0;
-    margin: 3px;
+    margin: 0.19rem;
 }
 
 header nav ul li a {
@@ -57,19 +56,19 @@ header nav ul li a {
 
 header nav ul li a:hover {
     text-shadow:
-        0 0 20px rgba(78, 78, 249, 1),
-        0 0 7px rgba(123, 47, 123, 0.8),
-        0 0 10px rgba(247, 60, 60, 0.4),
+        0 0 1.25rem rgba(78, 78, 249, 1),
+        0 0 0.44rem rgba(123, 47, 123, 0.8),
+        0 0 0.625rem rgba(247, 60, 60, 0.4),
 
-        0 0 20px rgba(78, 78, 249, 1),
-        0 0 7px rgba(123, 47, 123, 0.8),
-        0 0 10px rgba(247, 60, 60, 0.4),
+        0 0 1.25rem rgba(78, 78, 249, 1),
+        0 0 0.44rem rgba(123, 47, 123, 0.8),
+        0 0 0.625rem rgba(247, 60, 60, 0.4),
 
-        0 0 20px rgba(78, 78, 249, 1),
-        0 0 7px rgba(123, 47, 123, 0.8),
-        0 0 10px rgba(247, 60, 60, 0.4);
+        0 0 1.25rem rgba(78, 78, 249, 1),
+        0 0 0.44rem rgba(123, 47, 123, 0.8),
+        0 0 0.625rem rgba(247, 60, 60, 0.4);
 
-    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.3));
+    filter: drop-shadow(0 0 0.625rem rgba(255, 255, 255, 0.3));
 }
 
 .principal {
@@ -80,8 +79,8 @@ header nav ul li a:hover {
     align-items: center;
     width: 100%;
     height: 100vh;
-    min-height: 460px;
-    gap: 25px;
+    min-height: 40rem;
+    gap: 1.6rem;
     overflow: hidden;
 }
 
@@ -92,16 +91,16 @@ header nav ul li a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background: radial-gradient(circle, rgb(0, 0, 0, 0) 0%), linear-gradient(var(--pattern-color) 2px, transparent 1px), linear-gradient(to right, var(--pattern-color) 2px, transparent 1px);
-    background-size: cover, 10px 70px, 50px 10px;
-    transform: perspective(1000px) rotateX(60deg);
+    background: radial-gradient(circle, rgb(0, 0, 0, 0) 0%), linear-gradient(var(--pattern-color) 0.125rem, transparent 0.0625rem), linear-gradient(to right, var(--pattern-color) 0.125rem, transparent 0.0625rem);
+    background-size: cover, 0.625rem 4.375rem, 3.125rem 0.625rem;
+    transform: perspective(62.5rem) rotateX(60deg);
     transform-origin: center top;
     z-index: -1;
 }
 
 
 h1 {
-    font-size: 75px;
+    font-size: 4.7rem;
     text-align: center;
 }
 
@@ -114,82 +113,82 @@ h1 {
 .gradient-shadow::after {
     content: attr(data-text);
     position: absolute;
-    top: 10px;
-    left: -30px;
+    top: 0.625rem;
+    left: -1.875rem;
     width: 110%;
     color: transparent;
     background: radial-gradient(circle at right, rgb(247, 60, 60), rgb(123, 47, 123), rgb(78, 78, 249));
-    filter: blur(20px);
-    -webkit-filter: blur(20px);
-    -moz-filter: blur(20px);
+    filter: blur(1.25rem);
+    -webkit-filter: blur(1.25rem);
+    -moz-filter: blur(1.25rem);
     z-index: -1;
 }
 
 #profession {
     color: #619AEE;
-    font-size: 25px;
+    font-size: 1.57rem;
     font-weight: 100;
 }
 
 #profession::after {
     content: "____";
     position: relative;
-    bottom: 10px;
-    left: 10px;
+    bottom: 0.625rem;
+    left: 0.625rem;
 }
 
 #profession::before {
     content: "____";
     position: relative;
-    bottom: 10px;
-    right: 10px;
+    bottom: 0.625rem;
+    right: 0.625rem;
 }
 
 .principal>p {
     color: rgba(255, 255, 255, 0.7);
-    font-size: 18px;
+    font-size: 1.125rem;
     text-align: center;
 }
 
 .tecnologias-principais {
     display: flex;
-    gap: 15px;
+    gap: 0.94rem;
 }
 
 .tecnologias-principais>span {
     background-color: #1A1F2B;
     font-weight: 600;
-    font-size: 15px;
+    font-size: 0.94rem;
     color: #CCD0D6;
-    border-radius: 20px;
-    padding: 7px 15px;
-    box-shadow: 0 0 0 0.3px rgba(204, 208, 214, 0.4) inset;
+    border-radius: 1.25rem;
+    padding: 0.44rem 0.94rem;
+    box-shadow: 0 0 0 0.02rem rgba(204, 208, 214, 0.4) inset;
     cursor: text;
     transition: all 0.3s;
 }
 
 .tecnologias-principais>span:hover {
-    box-shadow: 0 0 0 0.5px rgb(92, 124, 230) inset;
+    box-shadow: 0 0 0 0.03rem rgb(92, 124, 230) inset;
 }
 
 .btns-works {
     display: flex;
-    gap: 20px;
+    gap: 1.25rem;
 }
 
 .btns-works>a {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 0.625rem;
     text-decoration: none;
     background-color: #1A1F2B;
     font-weight: 400;
     color: white;
-    border-radius: 25px;
-    padding: 13px 30px;
+    border-radius: 1.56rem;
+    padding: 0.81rem 1.875rem;
     transition: all 0.3s;
-    font-size: 17px;
+    font-size: 1.06rem;
     text-align: center;
 }
 
@@ -198,11 +197,11 @@ h1 {
 }
 
 .btns-works>a:hover svg {
-    transform: translateX(15px);
+    transform: translateX(0.9rem);
 }
 
 .btns-works>a:not(.btn-destaque) {
-    box-shadow: 0 0 0 0.3px rgba(204, 208, 214, 0.4) inset;
+    box-shadow: 0 0 0 0.02rem rgba(204, 208, 214, 0.4) inset;
 }
 
 .btns-works>a:hover:not(.btn-destaque) {
@@ -211,26 +210,26 @@ h1 {
 
 .btn-destaque {
     box-shadow:
-        0 0 20px 1px rgba(78, 78, 249, 0.5),
-        0 0 7px 0 rgba(123, 47, 123, 0.5),
-        0 0 10px 0 rgba(247, 60, 60, 0.5);
+        0 0 1.25rem 0.0625rem rgba(78, 78, 249, 0.5),
+        0 0 0.44rem 0 rgba(123, 47, 123, 0.5),
+        0 0 0.625rem 0 rgba(247, 60, 60, 0.5);
 }
 
 .btn-destaque:hover {
     box-shadow:
-        0 0 30px 1px rgba(78, 78, 249, 1),
-        0 0 7px 0 rgba(123, 47, 123, 1),
-        0 0 10px 0 rgba(247, 60, 60, 1);
+        0 0 1.875rem 0.0625rem rgba(78, 78, 249, 1),
+        0 0 0.44rem 0 rgba(123, 47, 123, 1),
+        0 0 0.625rem 0 rgba(247, 60, 60, 1);
 }
 
 .emogis {
     display: flex;
-    gap: 45px;
-    margin-top: 10px;
+    gap: 2.81rem;
+    margin-top: 0.625rem;
 }
 
 .emogis>span {
-    font-size: 25px;
+    font-size: 1.56rem;
     cursor: pointer;
     transition: all 0.2s;
 }
@@ -243,7 +242,7 @@ h1 {
     position: absolute;
     width: 100vw;
     height: 100vh;
-    font-size: 35px;
+    font-size: 2.2rem;
     color: rgba(255, 255, 255, 0.5);
     z-index: -1;
 }
@@ -286,7 +285,7 @@ h1 {
     }
 
     50% {
-        transform: translateY(-20px) rotate(10deg);
+        transform: translateY(-1.25rem) rotate(10deg);
     }
 
     100% {
@@ -302,11 +301,11 @@ h1 {
     position: absolute;
     bottom: 4vh;
     display: flex;
-    font-size: 14px;
+    font-size: 0.875rem;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 12px;
+    gap: 0.75rem;
     color: #9CA3AF;
 }
 
@@ -330,11 +329,11 @@ h1 {
     justify-content: center;
     flex-direction: column;
     height: max-content;
-    padding: 80px 0px 80px 0px;
+    padding: 5rem 0 5rem 0;
     width: auto;
     background-color: var(--main-bg-color1);
     color: #fff;
-    border-top: 2px solid #1F2937;
+    border-top: 0.125rem solid #1F2937;
 }
 
 .perfil {
@@ -342,18 +341,30 @@ h1 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 5px;
+    gap: 0.31rem;
     width: 55%;
 }
 
 .perfil img {
-    width: 150px;
+    width: 9.375rem;
     border-radius: 50%;
-    border: 5px solid #374151;
+    border: 0.2rem solid #747474;
+    transition: all 0.2s;
+    box-shadow:
+        0 0 1.25rem 0.0625rem rgba(78, 78, 249, 0.5),
+        0 0 0.44rem 0 rgba(123, 47, 123, 0.5),
+        0 0 0.625rem 0 rgba(247, 60, 60, 0.5);
+}
+
+.perfil img:hover {
+    box-shadow:
+        0 0 1.875rem 0.0625rem rgba(78, 78, 249, 1),
+        0 0 0.44rem 0 rgba(123, 47, 123, 1),
+        0 0 0.625rem 0 rgba(247, 60, 60, 1);
 }
 
 .perfil h2 {
-    font-size: 30px;
+    font-size: 1.875rem;
 }
 
 .perfil h3 {
@@ -363,7 +374,7 @@ h1 {
 
 .perfil p {
     color: #9CA3AF;
-    margin-top: 20px;
+    margin-top: 1.25rem;
 }
 
 
@@ -372,34 +383,34 @@ h1 {
     align-items: center;
     flex-direction: column;
     height: max-content;
-    padding: 80px 0px 100px 0px;
+    padding: 5rem 0 6.25rem 0;
     width: auto;
     background-color: var(--main-bg-color2);
     color: #fff;
 }
 
 .skills h2 {
-    margin-bottom: 45px;
-    font-size: 30px;
+    margin-bottom: 2.81rem;
+    font-size: 1.875rem;
     color: #fff;
     text-align: center;
 }
 
 .contact h2 {
-    font-size: 30px;
+    font-size: 1.875rem;
     color: #fff;
     text-align: center;
 }
 
 #projects h2 {
-    margin-bottom: calc(45px + 75px);
-    font-size: 30px;
+    margin-bottom: calc(2.81rem + 4.69rem);
+    font-size: 1.875rem;
     color: #fff;
     text-align: center;
 }
 
 .skills h3 {
-    font-size: 25px;
+    font-size: 1.56rem;
     text-align: center;
     text-align: center;
 }
@@ -407,14 +418,14 @@ h1 {
 .cards-skills {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
-    width: 900px;
+    gap: 1.56rem;
+    width: 56.25rem;
 }
 
 .cabecalho-skill {
     display: flex;
     justify-content: space-between;
-    margin: 7px 0;
+    margin: 0.44rem 0;
 }
 
 .cabecalho-skill h4 {
@@ -429,8 +440,8 @@ h1 {
 
 .cards-skills>section {
     background-color: #21262D;
-    padding: 25px;
-    border-radius: 20px;
+    padding: 1.56rem;
+    border-radius: 1.25rem;
     width: 100%;
     transition: all 0.2s;
 
@@ -442,27 +453,27 @@ h1 {
 
 .progress {
     background-color: #30363D;
-    border-radius: 30px;
-    height: 7px;
+    border-radius: 1.875rem;
+    height: 0.44rem;
 }
 
 .progress-bar-front {
     background: linear-gradient(90deg, rgba(59, 129, 246, 1) 0%, rgba(24, 76, 218, 1) 100%);
-    border-radius: 20px 0px 0px 20px;
-    height: 7px;
+    border-radius: 1.25rem 0 0 1.25rem;
+    height: 0.44rem;
 }
 
 .progress-bar-back {
     background: linear-gradient(90deg, rgba(33, 195, 93, 1) 0%, rgba(21, 124, 58, 1) 100%);
-    border-radius: 20px 0px 0px 20px;
-    height: 7px;
+    border-radius: 1.25rem 0 0 1.25rem;
+    height: 0.44rem;
 }
 
 #projects {
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding: 80px 0px 40px 0px;
+    padding: 5rem 0 2.5rem 0;
     color: #fff;
     background-color: var(--main-bg-color1);
 }
@@ -470,21 +481,26 @@ h1 {
 .cards-portifolio {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
+    gap: 1.56rem;
     width: auto;
 }
 
 .cards-portifolio section {
-    border-radius: 10px;
+    border-radius: 0.625rem;
     height: 100%;
-    margin-top: -75px;
+    margin-top: -4.69rem;
+    transition: all 0.3s;
+}
+
+.cards-portifolio section:hover {
+    transform: translateY(-0.2rem);
 }
 
 
 .cards-portifolio img {
-    border-radius: 10px 10px 0 0;
-    width: 330px;
-    height: 330px;
+    border-radius: 0.625rem 0.625rem 0 0;
+    width: 20.625rem;
+    height: 20.625rem;
     filter: brightness(75%);
     -webkit-filter: brightness(75%);
     -moz-filter: brightness(75%)
@@ -497,16 +513,16 @@ h1 {
 }
 
 .cards-portifolio>section>div {
-    bottom: 75px;
+    bottom: 4.69rem;
     display: flex;
     justify-content: space-around;
     flex-direction: column;
-    gap: 20px;
+    gap: 1.25rem;
     position: relative;
     background-color: rgba(31, 41, 55, 1);
-    padding: 20px;
-    border-radius: 0 0 10px 10px;
-    height: 260px;
+    padding: 1.25rem;
+    border-radius: 0 0 0.625rem 0.625rem;
+    height: 16.25rem;
 }
 
 .cards-portifolio>section>div>div {
@@ -516,7 +532,7 @@ h1 {
 
 .cards-portifolio a {
     color: #619AEE;
-    font-size: 18px;
+    font-size: 1.125rem;
     text-decoration: none;
 }
 
@@ -525,16 +541,16 @@ h1 {
 }
 
 .cards-portifolio span {
-    font-size: 13px;
-    width: 290px;
+    font-size: 0.81rem;
+    width: 18.125rem;
 }
 
 .contact {
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding: 45px;
-    gap: 25px;
+    padding: 2.81rem;
+    gap: 1.56rem;
     background-color: var(--main-bg-color2);
     width: 100%;
     color: #fff;
@@ -544,7 +560,7 @@ h1 {
 .location {
     color: #9CA3AF;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 1rem;
     text-align: center;
 }
 
@@ -552,27 +568,27 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 5px;
+    gap: 0.31rem;
 }
 
 .btn-contacts {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 1.25rem;
 }
 
 .btn-contacts a {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 5px;
+    gap: 0.31rem;
     color: #fff;
     background-color: #21262D;
     text-decoration: none;
-    padding: 13px 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 0 0.2px rgba(97, 154, 238, 0.4) inset;
+    padding: 0.81rem 1.25rem;
+    border-radius: 0.625rem;
+    box-shadow: 0 0 0 0.0125rem rgba(97, 154, 238, 0.4) inset;
 
 }
 
@@ -593,27 +609,27 @@ h1 {
     justify-content: center;
     align-items: center;
     align-items: center;
-    gap: 20px;
+    gap: 1.25rem;
 }
 
 .btn-social-media a {
     color: #9CA3AF;
-    padding: 10px 10px 5px 10px;
+    padding: 0.625rem 0.625rem 0.31rem 0.625rem;
 }
 
 .btn-social-media a:hover {
     color: #ffffff;
     background-color: #1F2937;
-    border-radius: 10px;
+    border-radius: 0.625rem;
 }
 
 footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 45px;
+    padding: 2.81rem;
     background-color: var(--main-bg-color2);
-    border-top: 2px solid #1F2937;
+    border-top: 0.125rem solid #1F2937;
 }
 
 footer p,
@@ -625,4 +641,72 @@ footer a {
 
 footer a:hover {
     color: #c2c2c2;
+}
+
+@media screen and (max-width: 1080px) {
+    .cards-portifolio {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .cards-skills {
+        width: 44rem;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .cards-skills {
+        width: 25rem;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .cards-portifolio {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    h1 {
+        font-size: 3.5rem;
+    }
+
+    .perfil {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .cards-skills {
+        width: 20.625rem;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    #profession {
+        font-size: 1.2rem;
+    }
+
+    .principal>p {
+        font-size: 0.9rem;
+    }
+
+    .btns-works {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .tecnologias-principais {
+        gap: 0.5rem
+    }
+
+    .tecnologias-principais>span {
+        font-size: 0.7rem;
+    }
+
+    .btn-contacts {
+        flex-direction: column;
+    }
+
+    header {
+        display: none;
+    }
 }
